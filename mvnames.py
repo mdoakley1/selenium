@@ -47,10 +47,7 @@ def retrieve_movie_names():
     # If window width is too small, some needed html is not sent. Increase
     # width if necessary.
     window_size = driver.get_window_size()
-    width  = window_size['width']
-
-    if width < 1800:
-        width = 1800
+    if window_size['width'] < 1800:
         driver.set_window_size(1800, window_size['height'])
         print('Adjusting window width so that we capture required fields')
     
